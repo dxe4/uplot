@@ -10,7 +10,7 @@ UPlot(df).sankey(
 ![Alt Text](https://github.com/dxe4/uplot/raw/master/gif/Peek%202019-05-12%2014-34.gif)
 
 ```python
-UPlot(_temp).time_series(
+UPlot(df).time_series(
     'iso_date', ['dep_delay', 'arr_delay']
 ).slider(
     "x", start_pct=30, end_pct=60, 
@@ -19,14 +19,14 @@ UPlot(_temp).time_series(
 ![Alt Text](https://github.com/dxe4/uplot/raw/master/gif/Peek%202019-05-12%2014-50.gif)
 
 ```python
-UPlot(_temp).calendar_heatmap(
+UPlot(df).calendar_heatmap(
     'iso_date', 'cnt', filter_type='piecewise'
 ).size(width=800, height=300).render()
 ```
 ![Alt Text](https://github.com/dxe4/uplot/raw/master/gif/Peek%202019-05-12%2014-51.gif)
 
 ```python
-UPlot(_temp).scatter_plot(
+UPlot(df).scatter_plot(
      "distance", "avg_speed", symbol_size=2
 ).slider('x', start_pct=0, end_pct=30).size(width=500, height=500).render()
 ```
