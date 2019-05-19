@@ -152,16 +152,16 @@ def to_serializable(val):
     return json.dumps(val)
 
 
-@to_serializable.register(_Base)
-def ts_datetime(val):
-    return val.to_json()
-
-
 class _Base():
 
     def to_json(self):
         _dict = attr.asdict(self)
         return json.dumps({k: v for k, v in _dict.items() if v is not None})
+
+
+@to_serializable.register(_Base)
+def ts_datetime(val):
+    return val.to_json()
 
 
 @attr.s
