@@ -1,3 +1,9 @@
+an attempt to allow creating interactive plots from python in jupyter using echarts
+although it worked fine when it was tested with a lot of data points it was very slow to render
+R gg plot was less than a second and echarts was 5-6 mins
+if i remember correctly a few million data points were used
+this approach is still 100% doable but only for small/medium size data
+
 ```python
 UPlot(df).sankey(
     'month','origin', 'distance',
